@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EBEEF2;
+
+    @media (min-width: calc(1920px + 20vw)) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.Mont {
+    font-family: Montserrat;
+}
+
+.main {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.header {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 1px 8px 0px gray;
+}
+
+header {
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 24px;
+
+    @media (max-width: 1500px) {
+        padding: 30px 30px;
+    }
+
+    @media (max-width: 1236px) {
+        padding: 30px 30px;
+    }
+}
+
+    header a {
+        font-family: Montserrat;
+        font-size: 1fr;
+        text-decoration: none;
+        color: #000;
+        white-space: nowrap;
+    }
+
+    header > a:visited, a:focus, a:hover {
+        font-family: Montserrat;
+        font-size: 24px;
+        color: #000;
+    }
+
+
+    header #get-record {
+        width: 210px;
+        height: 75px;
+        border-radius: 10px;
+        background: #592009;
+        color: #EBEEF2;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+
+#logo {
+    width: 202px;
+    height: 72.66px;
+    object-fit: cover;
+}
+
+header .main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @media (max-width: 1236px) {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+header .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+    .icon-text img {
+        width: 28px;
+    }
+
+    .icon-text a {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+main {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 733px;
+    width: 100%;
+}
+
+.slogan-container, .photo-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1236px) and (min-width: 854px) {
+    .photo-container {
+        display: none;
+    }
+    main {
+        height: auto;
+        padding-top: 170px;
+        gap: 10px;
+    }
+}
+@media (max-width:853px) {
+    .main-nav {
+        display: none;
+    }
+}
+
+.photo-container {
+    background-image: url('../images/nails.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    width: 723px;
+
+    @media (max-width: 1573px) and (min-width:1237px) {
+        width: 510px;
+        height: 510px;
+    }
+}
+
+    .photo-container > img {
+        width: 700px;
+        border-radius: 10px;
+    }
+
+.main-photo {
+    background-image: url('../images/main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.headlines {
+    align-items: start;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 40px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    gap: 25px;
+}
+
+h2 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+#services {
+    scroll-margin-block-start: 160px;
+}
+
+.services-grid {
+    display: grid;
+    margin: 10px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: calc(1920px + 20vw)) {
+        grid-auto-rows: 465px;
+    }
+
+    @media (max-width: calc(1920px + 20vw)) {
+        height: 60vw;
+        grid-auto-rows: 1fr;
+    }
+
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.service1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    background-image: url("../images/hairs.jpg");
+}
+
+.service2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-image: url("../images/nails_3.jpg");
+}
+
+.service3 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 5;
+    background-image: url("../images/brow_1.jpg");
+}
+
+.service4 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    background-image: url("../images/nails_2.jpg");
+}
+
+.service5 {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    background-image: url("../images/main.jpg");
+}
+
+.service6 {
+    grid-row: 2/ 3;
+    grid-column: 4 / 5;
+    background-image: url("../images/pedicure.jpeg");
+}
+
+.service7 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background-image: url("../images/brow_3.jpg");
+}
+
+.service8 {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+    background-image: url("../images/hair_1.jpg");
+}
+
+.Large {
+    font-size: 32px;
+}
+
+.black {
+    color: #000;
+}
+
+.services-grid > .card {
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    font-weight: 400;
+    color: #EBEEF2;
+    padding: 64px;
+    display: flex;
+    justify-content: right;
+    margin: 0px;
+    font-size: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease;
+}
+
+    .services-grid > .card:hover {
+        margin: -10px;
+        padding: 74px;
+        font-size: 1.1em;
+        transition: all 1s ease;
+    }
+
+    .services-grid > .card > span {
+        font-size: 1em;
+        border-radius: 10px;
+        height: fit-content;
+    }
+
+.masters-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+    .masters-list > .card {
+        width: 775px;
+    }
+
+.adress-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 733px;
+    width: 100%;
+}
+
+.adress-photo {
+    width: 100%;
+    background-image: url('../images/adress.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.adress-text {
+    width: 80%;
+    font-size: 24px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#adress {
+    scroll-margin-block-start: 160px;
+}
+

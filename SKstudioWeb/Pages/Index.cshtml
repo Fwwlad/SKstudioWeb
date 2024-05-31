@@ -1,0 +1,78 @@
+﻿@page "/"
+@using SKstudioWeb
+@namespace SKstudioWeb.Pages
+@model IndexModel;
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SKstudio-beauty</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div class="header">
+        <header>
+            <a href="#"><img src="logotip.svg" id="logo"/></a>
+            <div class="main-nav">
+                <div class="nav">
+                    <a href="#">О нас</a>
+                    <a href="#services">услуги</a>
+                </div>
+                <div class="nav">
+                    <a href="#adress">адресс</a>
+                </div>
+            </div>
+            <div class="data">
+                <div class="icon-text">
+                    <img src="images/phone.svg" />
+                    <a href="#">+7(905)515-81-41</a>
+                </div>
+                <div class="icon-text">
+                    <img src="images/map.svg" />
+                    <a href="https://yandex.ru/maps/-/CDbKrSNj" target="_blank">Истра ул. Ленина, 75</a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="main">
+        <main>
+            <div class="slogan-container">
+                <div class="headlines">
+                    <h1>Салон красоты<br>и ногтевого сервиса</h1>
+                    <h4>Создай свой<br>неповтроимый образ</h4>
+                </div>
+            </div>
+            <div class="photo-container">
+            </div>
+        </main>
+        <section class="services Mont" id="services">
+            <h2>Наши услуги</h2>
+            <div class="services-grid Large">
+                <div class="service1 card"></div>
+                <div class="service2 card"></div>
+                <div class="service3 card"><span>Брови</span></div>
+                <div class="service4 card"></div>
+                <div class="service5 card"><span>Маникюр</span></div>
+                <div class="service6 card"><span class="black">Педикюр</span></div>
+                <div class="service7 card"></div>
+                <div class="service8 card"></div>
+            </div>
+        </section>
+        <section class="adresses Mont" id="adress">
+            <h2>Адрес</h2>
+            <div class="adress-grid">
+                <div class="adress-photo"></div>
+                <div class="adress-text Mont">Мы находимся по адресу: <a href="https://yandex.ru/maps/-/CDbKrSNj" target="_blank">Истра ул. Ленина, 75</a></div>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </div>
+    <script src="js/site.js" asp-append-version="true"></script>
+</body>
+</html>

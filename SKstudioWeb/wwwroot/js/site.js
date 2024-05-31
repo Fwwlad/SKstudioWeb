@@ -1,4 +1,14 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
 
-// Write your JavaScript code.
+    menuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!mobileNav.contains(event.target) && !menuToggle.contains(event.target)) {
+            mobileNav.classList.remove('open');
+        }
+    });
+});

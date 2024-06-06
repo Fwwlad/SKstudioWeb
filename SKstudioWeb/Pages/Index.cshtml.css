@@ -1,11 +1,30 @@
-﻿* {
+﻿@font-face {
+    font-family: 'Montserrat';
+    src: url('~/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+* {
+    font-family: Montserrat;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: '#f7f7f7';
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    background-color: '#f7f7f7';
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat';
+    background-color: '#f7f7f7';
+    font-family: 'Montserrat';
+}
+
+.Mont {
+    font-family: 'Montserrat';
 }
 
 header {
@@ -29,6 +48,9 @@ header {
     header .logo {
         font-size: 24px;
         font-weight: bold;
+        width: 202px;
+        height: 72.66px;
+        object-fit: cover;
     }
 
     header .contact-info {
@@ -119,6 +141,7 @@ main {
     overflow: hidden;
     transition: transform 0.3s ease;
     border-radius: 10px;
+    max-height: 600px;
 }
 
     .service-card img {
@@ -185,7 +208,7 @@ main {
 
     .master-card img {
         width: 100%;
-        object-fit: scale-down;
+        object-fit: cover;
         max-height: 400px;
         border-radius: 10px 10px 0 0;
     }
